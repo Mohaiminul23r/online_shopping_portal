@@ -14,7 +14,6 @@
                         <input type="text" name="title" placeholder="Enter Slider Title..." class="medium" />
                     </td>
                 </tr>           
-    
                 <tr>
                     <td>
                         <label>Upload Image</label>
