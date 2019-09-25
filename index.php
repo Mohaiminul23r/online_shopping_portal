@@ -20,7 +20,7 @@
 					 <h2><?php echo $result['product_name']; ?></h2>
 					 <p><?php echo $fm->textShorten($result['description'], 60); ?></p>
 					 <p><span class="price"><?php echo $result['product_price']." tk"; ?></span></p>
-				     <div class="button"><span><a href="preview.php" class="details">Details</a></span></div>
+				     <div class="button"><span><a href="preview.php?proid=<?php echo $result['product_id']; ?>" class="details">Details</a></span></div>
 				</div>	
 				<?php } } ?>		
 			</div>
@@ -40,7 +40,7 @@
 					 <a href="details.php?proid=<?php echo $data['product_id']; ?>"><img height="150px" width="180px" src="admin/<?php echo $data['product_image']?>" alt="" /></a>
 					 <h2><?php echo $data['product_name']; ?></h2>
 					 <p><span class="price"><?php echo $data['product_price']." tk"; ?></span></p>
-				     <div class="button"><span><a href="preview.php" class="details">Details</a></span></div>
+				     <div class="button"><span><a href="preview.php?proid=<?php echo $data['product_id']; ?>" class="details">Details</a></span></div>
 				</div>
 			<?php } } ?>	
 			</div>

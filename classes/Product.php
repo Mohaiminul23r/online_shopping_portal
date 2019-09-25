@@ -202,5 +202,13 @@
 			$result = $this->db->select($query);
 			return $result;
 		}//end of method
+
+		public function showProductDetails($id){
+			$query = "SELECT p.*, b.brand_name, c.cat_name
+					  FROM products2 as p, brands as b, categories as c
+					  WHERE p.brand_id = b.brand_id AND p.cat_id = c.cat_id AND p.product_id = '$id'";
+			$result = $this->db->select($query);
+			return $result;		
+		}
 	}//end of Product class
 ?>

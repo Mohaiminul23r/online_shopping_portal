@@ -62,7 +62,6 @@
 								}
 						?> 
 					</td>
-					
 					<td><a href="product_edit.php?product_id=<?php echo $data['product_id']?>">Edit</a> || <a onclick= "return confirm('Do you want to delete this product?')" href="?delete_product_id=<?php echo $data['product_id']?>">Delete</a></td>
 				</tr>
 				<?php } } ?>
