@@ -148,7 +148,7 @@
                     <td></td>
                     <td>
                         <input type="submit" name="submit" Value="Update" />
-                        <a  href="admin/productlist.php"><button>Go Back</button></a>
+                       <a  href="productlist.php"><button type="button" class="btn btn-secondary">Go Back</button></a>
                     </td>
                 </tr>
             </table>

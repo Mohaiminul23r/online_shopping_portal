@@ -50,7 +50,7 @@
 					<td><?php echo $data['product_name']; ?></td>
 					<td><?php echo $data['cat_name']; ?></td>
 					<td><?php echo $data['brand_name']; ?></td>
-					<td style="width: 30%;"><?php echo $fm->textShorten($data['description']); ?></td>
+					<td style="width: 30%;"><?php echo $fm->textShorten($data['description'], 100); ?></td>
 					<td><?php echo $data['product_price']." tk"; ?></td>
 					<td><img src="<?php echo $data['product_image']; ?>" height="60px" width="80px"/></td>
 					<td>

@@ -1,4 +1,4 @@
-slider.php<div class="header_bottom">
+<div class="header_bottom">
 		<div class="header_bottom_left">
 			<div class="section group">
 				<div class="listview_1_of_2 images_1_of_2">

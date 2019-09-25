@@ -1,6 +1,7 @@
 <?php
-	include_once '../lib/Database.php';
-	include_once '../helpers/Format.php';
+	$filepath = realpath(dirname(__FILE__));
+	include_once ($filepath . "/../lib/Database.php");
+	include_once ($filepath . "/../helpers/Format.php");
 ?>
 
 <?php
@@ -188,6 +189,18 @@
 				   $msg = "<span class='error'>Failed to Delete Product!!!</span>";
 				   return $msg;
 				} 
-		}
+		}//end of method
+
+		public function getFeatureProduct(){
+			$query = "SELECT * FROM products2 WHERE product_type = '0' ORDER BY product_id DESC LIMIT 4";
+			$result = $this->db->select($query);
+			return $result;
+		}//end of method
+
+		public function getGeleralProduct(){
+			$query = "SELECT * FROM products2 WHERE product_type = '1' ORDER BY product_id DESC LIMIT 4";
+			$result = $this->db->select($query);
+			return $result;
+		}//end of method
 	}//end of Product class
 ?>

@@ -1,10 +1,12 @@
+<?php 
+    // include '../lib/Session.php';
+    // Session:checkSession();
+?>
 <?php
-    // include_once '../lib/Session.php';
-    // Session::checkSession();
-  // header("Cache-Control: no-cache, must-revalidate");
-  // header("Pragma: no-cache"); 
-  // header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); 
-  // header("Cache-Control: max-age=2592000");
+      header("Cache-Control: no-cache, must-revalidate");
+      header("Pragma: no-cache"); 
+      header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); 
+      header("Cache-Control: max-age=2592000");
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,13 +32,14 @@
     <!-- END: load jquery -->
     <script type="text/javascript" src="js/table/table.js"></script>
     <script src="js/setup.js" type="text/javascript"></script>
+  <!--   bootstrap CDN  -->
+   
 	 <script type="text/javascript">
         $(document).ready(function () {
             setupLeftMenu();
 		    setSidebarHeight();
         });
     </script>
-
 </head>
 <body>
     <div class="container_12">
