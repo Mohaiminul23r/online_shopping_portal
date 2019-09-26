@@ -35,10 +35,19 @@
 						<p>Category: <span><?php echo  $productDetails['cat_name']; ?></span></p>
 						<p>Brand:<span><?php echo  $productDetails['brand_name']; ?></span></p>
 					</div>
+
 				<div class="add-cart">
+				<span style="color: red; font-size: 16px;">
+					<?php
+						if(isset($pd_quantity)){
+							echo $pd_quantity;
+						}
+					?>	
+				</span>
 					<form action="" method="post">
 						<input type="number" class="buyfield" name="quantity" value="1"/>
-						<input type="submit" class="buysubmit"  value="Buy Now"/>
+						<input type="submit" class="buysubmit"  value="Add to Cart"/>
+					</form>
 				</div>
 			</div>
 			<div class="product-desc">
