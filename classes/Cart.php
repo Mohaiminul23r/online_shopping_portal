@@ -56,8 +56,9 @@
 					  WHERE cart_id = '$cart_id'";
 			$result = $this->db->update($query);
 			if($result){
-				$msg = "<span class='success'>Cart has been updated successfully.</span>";
-		  		return $msg;
+				// $msg = "<span class='success'>Cart has been updated successfully.</span>";
+		  // 		return $msg;
+				header("Location: cartpage.php");
 			}else{
 				$msg = "<span class='error'>Failed to update cart.</span>";
 		  		return $msg;

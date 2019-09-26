@@ -5,9 +5,15 @@
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$cart_id = $_POST['cart_id'];
 		$quantity = $_POST['quantity'];
-		$updateQuantity = $ct->updateQuantity($quantity, $cart_id);
+		$getCartqty = $ct->getAllCat()->fetch_assoc();
+		
 		if($quantity <= 0){
+			//delete if quantity 0 or less than 0
 			$deleteCart = $ct->deleteProductFromCart($cart_id);
+		}else if($quantity == $getCartqty['quantity']){
+			echo "not updated";
+		}else if($quantity != $getCartqty['quantity']){
+		 	$updateQuantity = $ct->updateQuantity($quantity, $cart_id);	
 		}
 	}
 
@@ -17,7 +23,12 @@
 		//$c_id = preg_replace('/[^-a-zA-Z0-9]/','', $_GET['cartid']);
 		$deleteCart = $ct->deleteProductFromCart($c_id);
 	}
-
+?>
+<?php
+	//refreshing page or reload
+	if(!isset($_GET['id'])){
+		echo "<meta http-equive='refresh' content='0;URL=?id=live'/>";
+	}
 ?>
  <div class="main">
     <div class="content">
@@ -116,13 +127,15 @@
 								<td style="text-align:right; font-style: italic">
 									<?php
 										$grandTotal = $sum + $vat;
+										Session::set("grandTotal", $grandTotal);
 										echo $grandTotal . " tk"; 
 									?>
 								</td>
 							</tr>
 					   </table>
 					<?php }else{
-						echo "You have nothing in the Cart. Shop Now";
+						//echo "You have nothing in the Cart. Shop Now";
+						header("Location: index.php");
 					}?>
 					</div>
 					<div class="shopping">

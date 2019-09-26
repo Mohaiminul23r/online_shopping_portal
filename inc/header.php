@@ -67,8 +67,9 @@
 									$getSum = $ct->getTotalSum();
 									if($getSum){
 										$sum = Session::get("sum");
+										$grandTotal = Session::get("grandTotal");
 										$quantity = Session::get("quantity");
-										echo $sum ." tk"." ON ".$quantity;
+										echo $grandTotal ." tk"." ON "."#".$quantity;
 									}else{
 										echo "(empty)";
 									}	
