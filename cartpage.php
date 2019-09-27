@@ -82,12 +82,12 @@
 										echo $total." tk"; 
 									?>	
 								</td>
-								<!-- <td><a onclick= "return confirm('Do you want to delete this product from the cart?')" href="?cartid = <?php echo $data['cart_id']?>">Delete</a></td> -->
-								<td>
+								<td><a onclick= "return confirm('Do you want to delete this product from the cart?')" href="?cartid = <?php echo $data['cart_id']?>">Delete</a></td>
+								<!-- <td>
 									<a onclick= "return confirm('Do you want to delete this product from the cart?')" href="?cartid=<?php echo $data['cart_id']?>">
 										<span class="glyphicon glyphicon-trash"></span>
 									</a>
-								</td>
+								</td> -->
 							</tr>
 
 							<?php
